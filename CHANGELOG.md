@@ -1,3 +1,93 @@
+# Upcoming Wekan release
+
+Known bugs:
+
+* https://github.com/wekan/wekan/issues/784
+
+This release adds the following new features:
+
+* Set first user as admin, it there is no existing
+  users and Wekan is not running at Sandstorm.
+
+Thanks to GitHub user Zokormazo for contributions.
+
+# v0.18 2017-04-02 Wekan release
+
+Known bugs:
+
+* https://github.com/wekan/wekan/issues/784
+
+This release adds the following new features:
+
+* Add TLS toggle option to smtp configuration;
+* [Comment permissions](https://github.com/wekan/wekan/issues/870);
+* Add bigger screenshots for Sandstorm.
+
+and fixes the following bugs:
+
+* Fix email settings loading:
+  MAIL_URL was overriden with database info all the time.
+  Now if MAIL_URL exists is not overwritten and if neither MAIL_URL nor
+  exists valid admin panel data MAIL_URL is not set.
+  MAIL_FROM was ignored. Same behaviour, env variable has bigger priority
+  than database configuration.
+  On both cases, althrought environment variable is set, updating admin-panel
+  mail settings will load new info and ignore the environment variable;
+* Dockerfile fix for local packages;
+* Don't send emails if missing smtp host;
+* Remove invitation code if email sending failed;
+* Show customized error msg while invitaion code is wrong during registration;
+* Fix "internal error" while registration is done;
+* Fix "cannot access disableRegistration of undefined" error;
+* Add high available server for getting the gpg keys - suppose it should lead
+  to fewer failures on getting the gpg keys leading to some rare build failures;
+* Add a docker build to the .travis.yml - this will help determine if pull
+  requests need further review before merging into devel;
+* Use navigator language by default instead of English.
+
+Thanks to GitHub users JamborJan, lkisme, rhelsing, Serubi, stephenmoloney,
+umbertooo and Zokormazo for their contributions.
+
+# v0.17 2017-03-25 Wekan release
+
+Known bugs:
+
+* https://github.com/wekan/wekan/issues/784
+
+This release fixes the following bugs:
+
+* Double slash problem on card pop-ups;
+* No need for Array.prototype if using rest operator;
+* Fix default font so Chinese is shown correctly.
+  Still looking for better solution for #914 although
+  commit had wrong number #707.
+
+Thanks to GitHub users mo-han, Serubin and vuxor for
+their contributions.
+
+# v0.16 2017-03-15 Wekan release
+
+Added missing changelog updates.
+
+# v0.15 2017-03-15 Wekan release
+
+Updated translations.
+
+# v0.14 2017-03-15 Wekan release
+
+Known bugs:
+
+* https://github.com/wekan/wekan/issues/785
+* https://github.com/wekan/wekan/issues/784
+
+This release fixes the following bug:
+
+* Set IE compatibility mode to Edge to so that
+  Wekan board loads correctly.
+
+Thanks to GitHub users immertroll and REJack for
+their contributions.
+
 # v0.13 2017-03-12 Wekan release
 
 Known bugs:

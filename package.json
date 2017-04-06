@@ -1,10 +1,10 @@
 {
   "name": "wekan",
-  "version": "0.11.1-rc1",
+  "version": "0.18.0",
   "description": "The open-source Trello-like kanban",
   "private": true,
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint --ignore-pattern 'packages/*' .",
     "test": "npm run --silent lint"
   },
   "repository": {
@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/wekan/wekan/issues"
   },
-  "homepage": "https://github.com/wekan/wekan",
+  "homepage": "https://wekan.github.io",
   "devDependencies": {
     "eslint": "^2.0.0"
   },
